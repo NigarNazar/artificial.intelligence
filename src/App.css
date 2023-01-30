@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;800&display=swap');
+*,*::after,*::before{
+  text-decoration: none !important;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -34,5 +41,139 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+body{
+  background: #222;
+  font-family: 'Open Sans', sans-serif;
+}
+.btn-duyme{
+  background: #3A68B8;
+border-radius: 5px;
+padding: 10px 15px;
+max-width: 100%;
+height: 44px;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+}
+
+.wrapper{
+  padding: 0 287px;
+}
+
+.famous{
+  cursor: default;
+}
+.nav-link{
+  font-weight: 600;
+font-size:16px;
+line-height: 22px;
+margin-right:20px;
+}
+.bars-icon{
+  color: #ccc;
+  font-size: 36px;
+  font-weight: 500;
+}
+.overlay-menu{
+background-color:rgba(0,0,0,0.8);
+height: 100vh;
+  width:0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+overflow-x: hidden;
+transition: 1.2s ease-out;
+}
+.aktive{
+  width: 100%;
+}
+.cross-icon{
+  color: #ccc;
+  position: absolute;
+  top: 34px;
+  right: 44px; 
+  font-size: 40px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nav-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.nav-links a{
+color: #ccc;
+font-size: 34px;
+font-weight: 500;
+position: relative;
+margin-bottom: 10px;
+padding: 5px 10px;
+transition:all 1s ease;
+}
+.nav-links a:hover{
+  color: #ccc;
+  transform: translateX(20px);
+}
+.nav-links a::after{
+  content: "";
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:8px;
+  background-color: #dcdde1;
+  z-index: -1;
+border-radius: 20px;
+transform: scale(0);
+transition:all 1s ease;
+}
+.nav-links a:hover::after{
+  transform: scale(1);
+}
+.Introduction  h6{
+  font-weight: 600;
+font-size: 18px;
+line-height: 160%;
+text-transform: uppercase;
+color: #3A68B8;
+}
+.Introduction h1{
+  font-weight: 800;
+font-size: 44px;
+line-height:130%;
+color: #fff;
+}
+.Introduction p{
+  font-weight: 600;
+font-size: 18px;
+line-height: 160%;
+color: #fff;
+opacity: .7;
+padding-top: 40px;
+}
+.left-side{
+  padding-top: 193px;
+}
+.right-side{
+  padding-top: 73px;
+}
+.right-side img{
+  max-width: 100%;
+}
+@media(max-width:1351px) and (min-width:1079px){
+  .wrapper{
+    padding: 0 100px;
+  }
+}
+@media(max-width:1079px){
+  .wrapper{
+    padding: 0 40px;
   }
 }
