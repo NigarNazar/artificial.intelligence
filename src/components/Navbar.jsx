@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import logo from "../assets/images/logo.svg"
 import {AiOutlineBars} from "react-icons/ai";
-import {GiCrossedBones} from "react-icons/gi";
+import {RxCross1} from "react-icons/rx";
 import Button from './Button';
 const Navbar = () => {
   const overleyMenuRef = useRef()
@@ -21,7 +21,7 @@ const Navbar = () => {
     <>
 
     <div className='overlay-menu' ref={overleyMenuRef}>
-      <GiCrossedBones className='cross-icon' onClick={closseMenyuIcon} />
+      <RxCross1 className='cross-icon' onClick={closseMenyuIcon} />
       <div className='nav-links'>
 <a href='#'>Home</a>
 <a href='#'>About</a>
