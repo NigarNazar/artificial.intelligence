@@ -5,7 +5,7 @@ import Photo from './Photo'
 import Companies from './Companies'
 export const Apply = () =>{
   return (
-    <div className='Apply-brain row'>
+    <div className='Apply-brain row pt-5'>
 <div className='right-side col-12 col-md-6 col-lg-6   '>
 <Photo imageValue={Brain}  />
 </div> 

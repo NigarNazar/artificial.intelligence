@@ -50,13 +50,14 @@ body{
 }
 .btn-duyme{
   background: #3A68B8;
-border-radius: 5px;
+border-radius: 6px;
 padding: 10px 15px;
 max-width: 100%;
 height: 44px;
 font-weight: 600;
 font-size: 16px;
 line-height: 22px;
+margin-right: 5px;
 }
 
 .wrapper{
@@ -93,6 +94,7 @@ position: relative;
   color: #ccc;
   font-size: 36px;
   font-weight: 500;
+
 }
 .overlay-menu{
 background-color:rgba(0,0,0,0.8);
@@ -187,25 +189,184 @@ opacity: .7;
   height: 100%;
 }
 .image img{
-  width: 180px;
+ width:400px !important;
+ height: 266px !important;
+ padding:110px 0;
+ max-width:100%;
+
 }
-.image{
+ .image{ 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
- padding: 197px 0 0 0;
+}
+.card{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  min-width: 100%;
+  width: 15%;
+  border: 1px solid #ddd;
+  padding: 20px 40px;
+  margin-bottom: 70px;
+  height: 382px !important;
+  
 }
 
+.swiper{
+  max-width: 100%;
+}
+.card img{
+  max-width: 100%;
+  width: 35%;
+  padding-bottom: 10px;
+}
+.card h3{
+  font-size: 18px;
+  font-weight: 800;
+}
+.card p{
+  font-size: 14px;
+  font-weight: 500;
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-left: 20px;
+  padding: 20px 0;
+}
+.cards a{
+  font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+color: #fff;
+}
 
-@media(max-width:1351px) and (min-width:1079px){
+.rabite a{
+  font-weight: 600;
+font-size: 12px;
+line-height: 18px;
+color: #fff;
+}
+.cards p{
+  padding-top: 5px;
+  font-weight: 450 !important;
+font-size: 14px !important;
+line-height: 18px !important;
+color: #fff !important;
+opacity: .6 !important;
+}
+.cards h5{
+  font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+color:#fff;
+}
+.rabite{
+  display: flex;
+  flex-direction: column;
+}
+.imagesCards img{
+  padding: 25px 10px;
+}
+@media(max-width:1534px){
+  .wrapper{
+    padding: 0 150px;
+  }
+}
+@media(max-width:1356px) and (min-width:1079px){
   .wrapper{
     padding: 0 100px;
   }
 }
 @media(max-width:1079px){
   .wrapper{
-    padding: 0 40px;
+    padding: 0 80px;
+  }
+  .left-side h1{
+    font-size: 30px;
+  }
+  .left-side p{
+    font-size: 16px;
+  }
+  .rabite a{
+    font-size: 11px;
+  }
+  .cards h5{
+    font-size: 12px;
+  }
+  .cards p{
+    font-size: 12px  !important;
   }
   
+.imagesCards img{
+  padding: 15px 3px;
+}
+}
+
+
+@media(max-width:500px){
+  .wrapper{
+    padding:0 40px;
+  }
+  .cards h5{
+    font-size: 12px;
+  }
+  .cards p{
+    font-size: 12px  !important;
+  }
+  
+.imagesCards img{
+  padding: 15px 3px;
+}
+.left-side h1{
+  font-size: 28px;
+}
+.left-side p{
+  font-size: 16px;
+}
+.cards:nth-child(3){
+  display: none;
+    }
+}
+
+
+@media(max-width:360px){
+  .wrapper{
+    padding: 0 30px;
+  
+  }
+  .famous{
+  display: none;
+  }
+  .bars-icon{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+  .left-side h1{
+    font-size: 24px;
+  }
+  .left-side p{
+    font-size: 14px;
+  }
+  .cards:nth-child(3){
+display: none;
+  }
+  .cards:nth-child(2){
+    display: none;
+  }
+  .card{
+    padding: 10px;
+    height: 300px !important;
+  }
+  .card h3{
+    font-size: 15px;
+  }
+  .card p{
+    font-size: 12px;
+  }
 }
