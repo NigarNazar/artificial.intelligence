@@ -10,9 +10,9 @@ import linkedlinSvg from '../assets/images/about/linkedlin.svg'
 import youtubeSvg from '../assets/images/about/youtube.svg'
 import worldSvg from '../assets/images/about/world.svg'
 import upSvg from '../assets/images/about/up.svg'
-export const Footer = () => {
+ const Footer = () => {
   return (
-    <div className='row'>
+    <div className='row Footer'>
         <div className='col-12 col-md-3 '>
             <div className='cards'>
                 <img src={footerSvg} />
@@ -75,3 +75,4 @@ export const Footer = () => {
     </div>
   )
 }
+ export default Footer

@@ -1,25 +1,32 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import Navbar from './components/Navbar';
-import Introduction from './components/Introduction';
-import {Brand }  from './components/Brand';
-import { Apply } from './components/Apply';
-import { Carousell } from './components/Carousell';
-import { Awesome } from './components/Awesome';
-import { Footer } from './components/Footer';
-
+import {BrowserRouter ,Routes ,Route} from "react-router-dom"
+import Navbar from './components/Navbar'
+import  Footer  from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Service from './pages/Service';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import Notfound from './pages/Notfound';
 
 function App() {
   return (
- <div div className='wrapper'>
-<Navbar />
-<Introduction />
-<Brand />
-<Apply />
-<Carousell />
-<Awesome />
+ <>
+ <BrowserRouter>
+ <Navbar />
+<Routes>
+<Route path='/' element={<Home />} />
+<Route path='/about' element={<About />} />
+<Route path='/service' element={<Service />} />
+<Route path='/blog' element={<Blog />} />
+<Route path='/contact' element={<Contact />} />
+<Route path='*' element= {<Notfound />} />
+</Routes>
 <Footer />
- </div>
+ </BrowserRouter>
+
+ </>
 
   );
 }

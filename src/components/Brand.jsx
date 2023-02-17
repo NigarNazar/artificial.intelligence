@@ -1,24 +1,26 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Autoplay } from 'swiper';
 import brand1 from '../assets/images/brand/brand1.svg'
 import brand2 from '../assets/images/brand/brand2.svg'
 import brand3 from '../assets/images/brand/brand3.svg'
 import brand4 from '../assets/images/brand/brand4.svg'
 
-export const Brand = () => {
+ const Brand = () => {
   return (
     <div className='image '>
       
       <Swiper
        slidesPerView={2}
         spaceBetween={40}
-        pagination={{
-          clickable: true,
+        
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
-        modules={[Pagination]}
+
+        modules={[Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide><img src={brand1}/></SwiperSlide>
@@ -37,3 +39,4 @@ export const Brand = () => {
     
   )
 }
+export default Brand

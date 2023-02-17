@@ -3,7 +3,7 @@ import Brain from '../assets/images/apply.svg'
 import Button from './Button'
 import Photo from './Photo'
 import Companies from './Companies'
-export const Apply = () =>{
+ const Apply = () =>{
   return (
     <div className='Apply-brain row pt-5'>
 <div className='right-side col-12 col-md-6 col-lg-6   '>
@@ -17,3 +17,4 @@ export const Apply = () =>{
     </div>
   )
 }
+ export default Apply

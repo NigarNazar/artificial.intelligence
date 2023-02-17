@@ -2,7 +2,7 @@ import React from 'react'
 import Technology from '../assets/images/technology.svg'
 import Photo from './Photo'
 import Companies from './Companies'
-export const Awesome = () => {
+ const Awesome = () => {
   return (
    <div className='Awesome row'>
     <div className='left-side col-12 col-md-6 col-lg-6 '>
@@ -16,3 +16,4 @@ export const Awesome = () => {
    </div>
   )
 }
+ export default Awesome

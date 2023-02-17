@@ -1,52 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;800&display=swap');
-*,*::after,*::before{
+
+*, ::after , ::before {
   text-decoration: none !important;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body{
+body{ 
   background: #222;
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+textarea{
+  resize: none;
+}
+.button{
+  background: #3A68B8;
+  border-radius: 6px;
+  padding: 10px 15px;
+  max-width: 100%;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
 }
 .btn-duyme{
   background: #3A68B8;
@@ -59,13 +33,29 @@ font-size: 16px;
 line-height: 22px;
 margin-right: 5px;
 }
-
-.wrapper{
-  padding: 0 287px;
+.navbar-toggler{
+  border: none;
 }
-
+.navbar , .Awesome{
+  padding: 20px 200px;
+}
+.Footer{
+  padding: 80px 300px;
+}
+.Introduction{
+  padding:0 200px ;
+}
+.Apply-brain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 220px 0 100px;
+}
 .famous{
   cursor: default;
+}
+.Carousell{
+  padding: 40px 100px;
 }
 .nav-link{
   font-weight: 600;
@@ -127,16 +117,17 @@ transition: 1.2s ease-out;
   align-items: center;
 }
 .nav-links a{
-color: #ccc;
-font-size: 34px;
-font-weight: 500;
-position: relative;
-margin-bottom: 10px;
-padding: 5px 10px;
-transition:all 1s ease;
-}
-.nav-links a:hover{
   color: #ccc;
+  font-size: 34px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  transition:all 1s ease;
+  list-style: none;
+  }
+.nav-links a:hover{
   transform: translateX(20px);
 }
 .nav-links a::after{
@@ -183,6 +174,7 @@ opacity: .7;
 }
 .right-side{
   padding-top: 73px;
+  padding-left: 40px;
 }
 .right-side img {
   max-width: 100%;
@@ -200,18 +192,18 @@ opacity: .7;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 0 200px;
 }
 .card{
   display: flex;
   justify-content:center;
   align-items: center;
-  min-width: 100%;
-  width: 15%;
+  max-width: 100%;
   border: 1px solid #ddd;
-  padding: 20px 40px;
+  padding: 20px 20px;
   margin-bottom: 70px;
   height: 382px !important;
-  
+  border-radius: 10px;
 }
 
 .swiper{
@@ -221,6 +213,7 @@ opacity: .7;
   max-width: 100%;
   width: 35%;
   padding-bottom: 10px;
+
 }
 .card h3{
   font-size: 18px;
@@ -234,7 +227,7 @@ opacity: .7;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 100%;
+  max-width:100%;
   margin-left: 20px;
   padding: 20px 0;
 }
@@ -244,7 +237,9 @@ font-size: 14px;
 line-height: 18px;
 color: #fff;
 }
-
+.navbar button{
+  border: none !important;
+}
 .rabite a{
   font-weight: 600;
 font-size: 12px;
@@ -272,25 +267,72 @@ color:#fff;
 .imagesCards img{
   padding: 25px 10px;
 }
+.contact{
+  padding: 4% 30%;
+}
 @media(max-width:1534px){
-  .wrapper{
-    padding: 0 150px;
+  .navbar , .Awesome{
+    padding: 20px  150px;
   }
+  
+  .Introduction{
+    padding:0 150px ;
+  }
+  .Apply-brain{
+    padding: 0  150px;
+  }
+  .image{
+    padding: 0 170px;
+  }
+  .Carousell{
+    padding: 40px 170px;
+  } 
 }
 @media(max-width:1356px) and (min-width:1079px){
-  .wrapper{
-    padding: 0 100px;
+  .navbar , .Awesome{
+    padding: 20px  100px;
   }
+  .Footer{
+    padding: 80px 100px;
+  }
+  .Introduction{
+    padding:0 100px ;
+  }
+  .Apply-brain{
+    padding: 0  100px;
+  }
+  .image{
+    padding: 0 120px;
+  }
+  .Carousell{
+    padding: 40px 150px;
+  } 
+ 
 }
 @media(max-width:1079px){
-  .wrapper{
-    padding: 0 80px;
+  .navbar , .Awesome{
+    padding: 20px  50px;
+  }
+  .Footer{
+    padding: 80px 50px;
+  }
+  .Introduction{
+    padding:0 50px;
+  }
+  .Apply-brain{
+    padding: 0  50px;
+  }
+  .image{
+    padding: 0 70px;
+  }
+  .Carousell{
+    padding: 40px 100px;
   }
   .left-side h1{
     font-size: 30px;
   }
   .left-side p{
-    font-size: 16px;
+    font-size: 18px;
   }
   .rabite a{
     font-size: 11px;
@@ -305,12 +347,34 @@ color:#fff;
 .imagesCards img{
   padding: 15px 3px;
 }
+.cards a , p, h5{
+  padding-left: 20px;
+}
+.cards:nth-child(3){
+  display: none;
+    }
+    
 }
 
 
-@media(max-width:500px){
-  .wrapper{
-    padding:0 40px;
+@media(max-width:600px){
+  .navbar , .Awesome{
+    padding: 0 40px;
+  }
+  .Footer{
+    padding: 80px 40px;
+  }
+  .Introduction{
+    padding:0 40px ;
+  }
+  .Apply-brain{
+    padding: 0  40px;
+  }
+  .image{
+    padding: 0 40px;
+  }
+  .Carousell{
+    padding: 40px 80px;
   }
   .cards h5{
     font-size: 12px;
@@ -331,13 +395,28 @@ color:#fff;
 .cards:nth-child(3){
   display: none;
     }
+    .contact{
+      padding: 4% 20%;
+    }
 }
-
-
-@media(max-width:360px){
-  .wrapper{
+@media(max-width:450px){
+  .navbar , .Awesome{
     padding: 0 30px;
-  
+  }
+  .Footer{
+    padding: 80px 40px;
+  }
+  .Introduction{
+    padding:0 40px ;
+  }
+  .Apply-brain{
+    padding: 0  40px;
+  }
+  .image{
+    padding: 0 30px;
+  }
+  .Carousell{
+    padding: 40px 70px;
   }
   .famous{
   display: none;
@@ -368,5 +447,60 @@ display: none;
   }
   .card p{
     font-size: 12px;
+  }
+  
+}
+
+@media(max-width:360px){
+  .navbar , .Awesome{
+    padding: 0 30px;
+  }
+  .Footer{
+    padding: 80px 30px;
+  }
+  .Introduction{
+    padding:0 30px ;
+  }
+  .Apply-brain{
+    padding: 0  30px;
+  }
+  .image{
+    padding: 0 30px;
+  }
+  .Carousell{
+    padding: 40px 70px;
+  }
+  .famous{
+  display: none;
+  }
+  .bars-icon{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+  .left-side h1{
+    font-size: 24px;
+  }
+  .left-side p{
+    font-size: 14px;
+  }
+  .cards:nth-child(3){
+display: none;
+  }
+  .cards:nth-child(2){
+    display: none;
+  }
+  .card{
+    padding: 10px;
+    height: 300px !important;
+  }
+  .card h3{
+    font-size: 15px;
+  }
+  .card p{
+    font-size: 12px;
+  }
+  .contact{
+    padding: 4% 5%;
   }
 }

@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.svg"
 import {AiOutlineBars} from "react-icons/ai";
 import {RxCross1} from "react-icons/rx";
 import Button from './Button';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const overleyMenuRef = useRef()
   function openMenyuIcon(e){
@@ -21,40 +22,42 @@ const Navbar = () => {
     <>
 
     <div className='overlay-menu' ref={overleyMenuRef}>
-      <RxCross1 className='cross-icon' onClick={closseMenyuIcon} />
+    <div className="navbar-toggler " type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"   onClick={closseMenyuIcon} >
+    <RxCross1 className='cross-icon' />
+    </div>
+     
       <div className='nav-links'>
-<a href='#'>Home</a>
-<a href='#'>About</a>
-<a href='#'>Blog</a>
-<a href='#'>Service</a>
-<a href='#'>Contact</a>
-
-      </div>
+        <Link to='/'>Home</Link>
+        <Link to='about'>About</Link>
+        <Link to='blog'>Blog</Link>
+        <Link to='service'>Service</Link>
+        <Link to='contact'>Contact</Link>
+ </div>
       
     </div>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
-    <a className="navbar-brand famous" href="#"><img src={logo} /></a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-      <AiOutlineBars className='bars-icon' onClick={openMenyuIcon} />
-    </button>
+    <a className="navbar-brand famous" to="#"><img src={logo} /></a>
+    <div className="navbar-toggler " type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"  onClick={openMenyuIcon} >
+      <AiOutlineBars className='bars-icon' />
+    </div>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link  text-white" aria-current="page" href="#">Home</a>
+          <Link className="nav-link  text-white" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white " href="#">About</a>
+          <Link className="nav-link text-white " to="about">About</Link>
         </li>
        
         <li className="nav-item">
-          <a className="nav-link text-white" href="#">Service</a>
+          <Link className="nav-link text-white" to="Service">Service</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white" href="#">Blog</a>
+          <Link className="nav-link text-white" to="blog">Blog</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white" href="#">Contact</a>
+          <Link className="nav-link text-white" to="contact">Contact</Link>
         </li>
 
       </ul>

@@ -2,22 +2,22 @@ import React from 'react'
 import Card from './Card'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Autoplay } from 'swiper';
 import Carouselsvg1 from '../assets/images/carousell.svg/carousell1.svg'
 import Carouselsvg2 from '../assets/images/carousell.svg/carousell2.svg'
 import Carouselsvg3 from '../assets/images/carousell.svg/carousell3.svg'
 import Carouselsvg4 from '../assets/images/carousell.svg/carousell4.svg'
 import Carouselsvg5 from '../assets/images/carousell.svg/carousell5.svg'
-export const Carousell = () => {
+ const Carousell = () => {
     return (
-        <div className='row mt-4 mb-4 p-5'>
+        <div className='row mt-5  Carousell'>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
                 breakpoints={{
                     300: {
                         slidesPerView: 1,
@@ -25,11 +25,11 @@ export const Carousell = () => {
                     },
                     420: {
                         slidesPerView: 1,
-                        spaceBetween: 10,
+                        spaceBetween: 5,
                     },
-                    500:{
-                        slidesPerView: 1,
-                        spaceBetween: 30,
+                    570:{
+                        slidesPerView: 2,
+                        spaceBetween: 20,
                     },
           640: {
                         slidesPerView: 2,
@@ -39,12 +39,16 @@ export const Carousell = () => {
                         slidesPerView: 2,
                         spaceBetween: 40,
                     },
-                998: {
+            970: {
                         slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1396: {
+                        slidesPerView: 4,
                         spaceBetween: 40,
                     }
                 }}
-                modules={[Pagination]}
+              modules={[Autoplay]}
                 className="mySwiper"
             >
                 <SwiperSlide> <Card
@@ -79,4 +83,4 @@ export const Carousell = () => {
         </div>
     )
 }
-
+ export default Carousell
